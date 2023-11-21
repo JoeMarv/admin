@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --clr-nav-grey-50: #656266;
+    --clr-nav-grey-100: #616161;
+    --clr-nav-grey-200: #322F33;
+    --clr-nav-grey-300: #1C181D;
+    --clr-font-light: #E3E3E3;
+    --clr-font-mid: #616161;
+    --clr-font-dark: #475467;
+    --clr-stroke-50: #EBEBEB;
+    --clr-stroke-100: rgba(255,255,255,0.07); /*#000000 7% opacity*/
+    --clr-stroke-200: rgba(255,255,255,0.2); /*#FFFFFF 20% opacity*/
+    --clr-state-hover: #F7F7F7;
+    --clr-state-pressed: #F0F0F0;
+    --clr-state-focused: #005BD3;
+    --clr-plain-white: #FFFFFF;
+    --clr-plain-background: #F1F1F1;
+    --font-family: 'Inter', sans-serif;
+    --transition: 0.3s ease;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* MOBILE VIEW */
+body {
+    background-color: var(--clr-plain-background);
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: var(--font-family);
+    margin: 0vw;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--clr-nav-grey-300);
+    align-items: center;
+    padding: 4vw 4vw 2vw 4vw;
+    justify-content: space-between;
+}
+
+.logo-btn {
+    margin: 0vw;
+    padding: 0vw;
+    width: 10vw;
+    height: 10vw;
+    background-color: inherit;
+    background-image: url(assets/logo-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.search-bar {
+    font-family: var(--font-family);
+    background: var(--clr-nav-grey-200) url(assets/search-icon.svg) no-repeat 3vw center;
+    background-size: 4vw;
+    border: 1px solid var(--clr-stroke-200);
+    border-radius: 2vw;
+    color: var(--clr-font-light);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 2vw 2vw 2vw 10vw;
+}
+
+.search-bar::placeholder {
+    color: var(--clr-font-mid);
+    font-weight: 500;
+}
+
+.search-bar:active, .search-bar:focus {
+    border: 2px solid var(--clr-plain-white);
+}
+
+.notification-and-profile-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-btn {
+    background-color: inherit;
+    border: none;
+    padding: 2vw;
+}
+
+.notification-btn img {
+    width: 6vw;
+    height: 6vw;
+}
+
+.profile-btn {
+    padding: 0vw;
+    border: none;
+    font-family: var(--font-family);
+    border: 2px solid var(--clr-font-dark);
+    padding: 2vw 1.5vw;
+    background-color: rgba(54, 251, 161, 1);
+    border-radius: 2vw;
+    color: hsl(145, 92%, 23%);
+}
+
+.long-name {
+    display: none;
+}
+
+.short-name {
+    font-weight: 500;
+}
