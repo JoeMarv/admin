@@ -173,6 +173,14 @@ body {
     margin: 0vw 0vw 0vw 1vw;
 }
 
+.long-name {
+    display: none;
+}
+
+.short-name {
+    font-weight: 500;
+}
+
 .profile-contents {
     position: absolute;
     display: flex;
@@ -285,10 +293,44 @@ body {
 /* OPEN PROFILE PANEL END */
 
 
-.long-name {
-    display: none;
+.extend {
+    display: flex;
+    flex-direction: row;
+    margin: 8vw 0vw;
+    padding: 4vw;
+    background-color: var(--clr-nav-grey-300);
+    color: var(--clr-plain-white);
+    font-size: 1.085em;
+    font-weight: 500; 
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.short-name {
+.extend-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.label-btn {
+    margin: 4vw 0vw 0vw 0vw;
     font-weight: 500;
+    padding: 2vw 3vw;
+    border-radius: 1.5vw;
+    border: none;
+    background-color: var(--clr-plain-background);
+}
+
+.close-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0vw;
+    background-color: inherit;
+    border: none;
+}
+
+.close-btn svg {
+    height: 6vw;
+    width: 6vw;
 }

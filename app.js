@@ -4,6 +4,8 @@ const notification = document.querySelector('.notification')
 const profileBtn = document.querySelector('.profile-btn')
 const profile = document.querySelector('.profile')
 const logoBtn = document.querySelector('.logo-btn')
+const closeBtn = document.querySelector('.close-btn')
+const extendDiv = document.querySelector('.extend')
 
 
 //HEADER BUTTON FUNCTIONS
@@ -19,4 +21,10 @@ notificationBtn.addEventListener('click', function() {
 profileBtn.addEventListener('click', function() {
     profile.classList.toggle('open')
     notification.classList.remove('open')
+})
+
+
+//CLOSE BUTTON FUNCTION
+closeBtn.addEventListener('click', function() {
+    extendDiv.style.display = 'none'
 })
