@@ -4,6 +4,7 @@ const notification = document.querySelector('.notification')
 const profileBtn = document.querySelector('.profile-btn')
 const profile = document.querySelector('.profile')
 const logoBtn = document.querySelector('.logo-btn')
+const planBtn  = document.querySelector('.plan-btn')
 const closeBtn = document.querySelector('.close-btn')
 const extendDiv = document.querySelector('.extend')
 const setupBtn = document.querySelector('.setup-btn')
@@ -14,10 +15,6 @@ const stepBtn = document.querySelectorAll('.step-btn')
 
 
 //HEADER BUTTON FUNCTIONS
-logoBtn.addEventListener('click', function() {
-    location.reload()
-})
-
 notificationBtn.addEventListener('click', function() {
     notification.classList.toggle('open')
     profile.classList.remove('open')
@@ -26,6 +23,16 @@ notificationBtn.addEventListener('click', function() {
 profileBtn.addEventListener('click', function() {
     profile.classList.toggle('open')
     notification.classList.remove('open')
+})
+
+
+//REDIRECT BUTTON FUNCTIONS
+logoBtn.addEventListener('click', function() {
+    window.location = "https://www.shopify.com"
+})
+
+planBtn.addEventListener('click', function() {
+    window.location = "https://www.shopify.com/pricing"
 })
 
 
