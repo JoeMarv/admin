@@ -84,6 +84,6 @@ stepBtn.forEach(function(clicked) {
         
             number.innerHTML = tickedButtons
             bar.style.width = (tickedButtons * 20) + '%'
-        }, 150)
+        }, 200)
     })
 })
