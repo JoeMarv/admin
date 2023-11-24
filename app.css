@@ -553,9 +553,13 @@ body {
     flex-direction: row;
     justify-content: space between;
     align-items: center;
-    margin: 2vw 0vw 0vw 0vw;
-    display: none;
+    /* display: none; */
+    transition: opacity var(--transition), max-height var(--transition);
     width: 83vw;
+    opacity: 0;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 .step-main-text {
@@ -606,10 +610,10 @@ body {
 
 .show .step-main-body {
     display: flex;
+    opacity: 1;
+    max-height: 1000px;
+    margin: 2vw 0vw 0vw 0vw;
 }
 /* STEP OPEN END */
-
-
-
 
 /* breakpoints 768 and 1024 */
