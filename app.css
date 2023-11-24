@@ -181,6 +181,10 @@ body {
     margin: 0vw 0vw 0vw 1vw;
 }
 
+.profile-btn:focus {
+    border: 2px solid var(--clr-state-focused);
+}
+
 .long-name {
     display: none;
 }
@@ -328,6 +332,9 @@ body {
     border-radius: 1.5vw;
     border: none;
     background-color: var(--clr-plain-background);
+    color: var(--clr-font-dark);
+    border: 1px solid var(--clr-stroke-200);
+    box-shadow: 0px 1px var(--clr-nav-grey-200);
 }
 
 .close-btn {
@@ -474,6 +481,7 @@ body {
     text-align: left;
     border: none;
     background-color: inherit;
+    color: var(--clr-font-dark);
 }
 
 .step-main-body {
@@ -494,12 +502,9 @@ body {
     margin: 0vw 2vw 0vw 0vw;
 }
 
-.text-one {
-    width: 40vw;
-}
-
 .step-main-text span {
     color: var(--clr-font-mid);
+    line-height: 1.6;
 }
 
 .step-main-text span span {
@@ -514,22 +519,9 @@ body {
     background-color: var(--clr-nav-grey-200);
     box-shadow: 1px 1px 1.5px inset #E3E3E3;
     border: 1.px solid #000000;
-    font-size: 1em;
+    font-size: 1.085em;
     border-radius: 2vw;
-    padding: 1vw 3vw;
-}
-
-.step-main-image {
-    display: flex;
-}
-
-.one {
-    background-image: url(https://crushingit.tech/hackathon-assets/customise-store.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 35vw;
-    height: 25vw;
-    margin: 0vw 0vw 0vw 8vw;
+    padding: 2vw 3vw;
 }
 
 .import {
