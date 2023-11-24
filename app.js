@@ -63,3 +63,27 @@ steps.forEach(function(step) {
         step.classList.toggle('show')
     })
 })
+
+
+//COMPLETION BUTTON LOGIC AND PROGRESS BAR
+stepBtn.forEach(function(clicked) {
+    const number = document.querySelector('.done')
+    const bar = document.querySelector('.progress-bar-complete')
+
+
+    clicked.addEventListener('click', function() {
+        //TOGGLING CLICKED CLASS
+        clicked.classList.toggle('loading')
+
+        setTimeout(function() {
+            clicked.classList.toggle('clicked')
+
+            //UPDATING THE NUMBER AND PROGRESS BAR
+            var progress = document.querySelectorAll('.clicked')
+            var tickedButtons = progress.length
+        
+            number.innerHTML = tickedButtons
+            bar.style.width = (tickedButtons * 20) + '%'
+        }, 150)
+    })
+})
