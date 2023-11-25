@@ -32,12 +32,14 @@ html {
 button {
     font-family: var(--font-family);
     cursor: pointer;
+    transition: var(--transition);
 }
 
 a {
     text-decoration: none;
     color: #000000;
     cursor: pointer;
+    transition: var(--transition);
 }
 
 /* MOBILE VIEW */
@@ -72,22 +74,31 @@ body {
     border: none;
 }
 
-.search-icon {
-    position: absolute;
-    margin: 2.5vw 3vw 0vw 3vw;
-}
-
 .search-bar {
+    position: relative;
     font-family: var(--font-family);
-    background: var(--clr-nav-grey-200) url(https://crushingit.tech/hackathon-assets/icon-search.svg) no-repeat 3vw center;
+    background: var(--clr-nav-grey-300) url(https://crushingit.tech/hackathon-assets/icon-search.svg) no-repeat 3vw center;
     background-size: 4vw;
-    border: 2px solid var(--clr-stroke-200);
+    border: 1px solid var(--clr-nav-grey-200);
     border-radius: 2vw;
     color: var(--clr-font-light);
     font-size: 1em;
     font-weight: 500;
     padding: 2vw 2vw 2vw 10vw;
     width: 54vw;
+    cursor: pointer;
+}
+
+.search-bar::before {
+    content: '';
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4vw;
+    height: 4vw;
+    background: url(https://crushingit.tech/hackathon-assets/icon-search.svg) no-repeat center center;
+    background-size: contain;
 }
 
 .search-bar::placeholder {
@@ -221,7 +232,6 @@ body {
     justify-content: space-between;
     margin: 2vw;
     background-color: var(--clr-plain-background);
-    border-radius: 1vw;
     align-items: center;
     border-radius: 3vw;
 }
@@ -326,6 +336,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 .plan-btn {
@@ -345,6 +356,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0vw;
+    margin: 0vw 0vw 0vw 2vw;
     background-color: inherit;
     border: none;
     color: var(--clr-nav-grey-300);
@@ -551,9 +563,8 @@ body {
 .step-main-body {
     display: flex;
     flex-direction: row;
-    justify-content: space between;
+    justify-content: space-between;
     align-items: center;
-    /* display: none; */
     transition: opacity var(--transition), max-height var(--transition);
     width: 83vw;
     opacity: 0;
@@ -616,4 +627,394 @@ body {
 }
 /* STEP OPEN END */
 
-/* breakpoints 768 and 1024 */
+
+/* SMALL PC SCREEN VIEW >== 768PX */
+@media only screen and (min-width: 768px) {
+    button {
+        border: 2px solid transparent;
+    }
+
+    button:focus {
+        border: 2px solid var(--clr-state-focused);
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1vw 2vw;
+    }
+
+    .logo-btn {
+        margin: 0vw;
+        width: 12vw;
+        height: 4vw;
+        background-image: url(https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg);
+    }
+
+    .search-bar {
+        background: var(--clr-nav-grey-300) url('https://crushingit.tech/hackathon-assets/icon-search.svg') no-repeat 1.5vw center;
+        background-size: 2vw;
+        border-radius: 1vw;
+        font-weight: 500;
+        padding: 1vw 1vw 1vw 5vw;
+        width: 36vw;
+        transition: var(--transition);
+    }
+
+    .search-bar::before {
+        content: '';
+        position: absolute;
+        left: 1vw;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .search-bar::placeholder {
+        font-size: 1.085em;
+    }
+
+    .search-bar:hover {
+        border: 1px solid var(--clr-plain-white)
+    }
+
+    .search-bar:active,
+    .search-bar:focus {
+        border: 2px solid var(--clr-plain-white);
+    }
+
+    .notification-and-profile-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .notification-btn {
+        background-color: var(--clr-nav-grey-200);
+        border: 2px solid transparent;
+        padding: 1vw;
+        border-radius: 1vw;
+        margin: 0vw;
+    }
+
+    .notification-btn:hover, .notification-btn:active {
+        background-color: var(--clr-nav-grey-100);
+    }
+
+    .notification-btn:focus {
+        border: 2px solid var(--clr-state-focused);
+    }
+
+    .notification-btn svg {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .notification-contents {
+        width: 40vw;
+        margin: 2vw 2vw 0vw 54vw;
+        padding: 2vw;
+        border-radius: 2vw;
+        box-shadow: 0.25vw 0.25vw 0.5vw 0.25vw rgba(0, 0, 0, 0.05);
+        display: none;
+    }
+
+    .notification-header {
+        width: 40vw;
+        font-size: 1.17em;
+        margin: 1vw 0vw 2vw 0vw;
+    }
+
+    .notification-header svg {
+        margin: 0vw 0vw 0vw 2vw;
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .notification-body {
+        width: 36vw;
+        font-weight: 600;
+        padding: 2vw;
+    }
+
+    .profile-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: none;
+        padding: 0vw;
+        background-color: var(--clr-nav-grey-200);
+        border-radius: 1vw;
+        color: var(--clr-plain-white);
+        margin: 0vw 0vw 0vw 1vw;
+        font-weight: 500;
+        border: 2px solid transparent;
+    }
+
+    .profile-btn:hover, .profile-btn:active {
+        background-color: var(--clr-nav-grey-100);
+    }
+
+    .profile-btn:focus {
+        border: 2px solid var(--clr-state-focused);
+    }
+
+    .long-name {
+        display: flex;
+        margin: 0vw 1.25vw;
+    }
+
+    .short-name {
+        background-color: rgba(54, 251, 161, 1);
+        border-radius: 1vw;
+        color: hsl(145, 92%, 23%);
+        padding: 1.5vw 1vw;
+        font-size: 1.085em;
+    }
+
+    .profile-contents {
+        width: 32vw;
+        margin: 2vw 2vw 0vw 66vw;
+        left: 0vw;
+        border-radius: 2vw;
+        box-shadow: 0.25vw 0.25vw 0.5vw 0.25vw rgba(0,0,0, 0.05)
+    }
+
+    .profile-name {
+        margin: 1vw;
+        border-radius: 1.5vw;
+    }
+
+    .dc {
+        border-radius: 1vw;
+        padding: 1vw;
+        margin: 0.75vw 1vw;
+    }
+
+    .profile-name svg {
+        width: 4vw;
+        height: 4vw;
+        margin: 0vw 1vw 0vw 0vw;
+    }
+
+    .profile-label-pfp {
+        margin: 0vw 0.5vw;
+        padding: 0.75vw 1vw;
+        transition: var(--transition);
+        border-radius: 0.75vw;
+        border: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    .profile-label-pfp:hover, .profile-label-pfp:active {
+        background-color: var(--clr-plain-background);
+    }
+
+    .profile-label-pfp:focus {
+        border: 2px solid var(--clr-state-focused);
+        background-color: var(--clr-plain-white);
+    }
+
+    .profile-label-pfp svg {
+        width: 3.5vw;
+        height: 3.5vw;
+        margin: 0vw 1vw 0vw 0vw;
+    }
+
+    .profile-content-middle {
+        border-bottom: 1px solid var(--clr-stroke-100);
+    }
+
+    .profile-content-middle a {
+        margin: 0vw 0.5vw;
+        padding: 1vw 0vw 1vw 1.5vw;
+        border-radius: 0.75vw;
+        border: 2px solid transparent;
+    }
+
+    .profile-content-middle a:hover, .profile-content-middle a:active {
+        background-color: var(--clr-plain-background);
+    }
+
+    .profile-content-middle a:focus {
+        border: 2px solid var(--clr-state-focused);
+        background-color: var(--clr-plain-white);
+    }
+
+    .name {
+        margin: 2vw 0vw 0vw 1.5vw;
+    }
+
+    .email {
+        margin: 0.5vw 0vw 1vw 1.5vw;
+    }
+
+    .bottom-label {
+        margin: 0vw 0.5vw;
+        padding: 1vw 0vw 1.5vw 1.5vw;
+        border-radius: 0.75vw;
+        border: 2px solid transparent;
+    }
+
+    .bottom-label:hover, .bottom-label:active {
+        background-color: var(--clr-plain-background);
+    }
+
+    .bottom-label:focus {
+        border: 2px solid var(--clr-state-focused);
+        background-color: var(--clr-plain-white);
+    }
+
+    .extend {
+        margin: 4vw 15vw 0vw 15vw;
+        padding: 2vw;
+        width: 70vw;
+        border-radius: 1vw;
+        align-items: center
+    }
+
+    .extend-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .plan-btn {
+        margin: 0vw;
+        padding: 1vw 1.5vw;
+        border-radius: 0.75vw;
+    }
+
+    .close-btn svg {
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .main {
+        padding: 2vw 1vw 1vw 1vw;
+        margin: 2vw 15vw 0vw 15vw;
+        width: 72vw;
+        border-radius: 1vw;
+    }
+
+    .main-header {
+        padding: 0vw 1vw;
+    }
+
+    .setup-btn {
+        padding: 0vw 0vw 0.5vw 0vw;
+    }
+
+    .direction-icons svg {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .progress {
+        padding: 2vw 0vw 0.5vw 0vw;
+    }
+
+    .progress-bar {
+        height: 0.625vw;
+        width: 10vw;
+        margin: 0vw 0vw 0vw 2vw;
+        border-radius: 0.375vw;
+    }
+
+    .progress-bar-complete {
+        height: 0.625vw;
+        width: 0%;
+        border-radius: 0.375vw;
+    }
+
+    .main-body {
+        margin: 2vw 0vw 0vw 0vw;
+    }
+
+    .step {
+        border-radius: 1vw;
+        padding: 1vw;
+    }
+
+    .step-btn {
+        height: 3.5vw;
+        width: 3.5vw;
+        margin: 0vw 1vw 0vw 0vw;
+        border-radius: 1vw;
+    }
+
+    .step-btn svg {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .step-main-btn {
+        padding: 0.75vw 0vw;
+        width: 66.5vw;
+    }
+
+    .step-main-body {
+        width: 66.5vw;
+        margin: none;
+    }
+
+    .step-main-text {
+        margin: 0vw;
+        width: 40vw;
+    }
+
+    .step-main-text button {
+        margin: 2vw 0vw 0.5vw 0vw;
+        border-radius: 1vw;
+        padding: 1vw 1.5vw;
+    }
+
+    .step-main-image {
+        width: 18vw;
+        height: 14vw;
+        margin: 0vw 3vw 0vw 0vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .one {
+        background-image: url(https://crushingit.tech/hackathon-assets/customise-store.png);
+    }
+
+    .two {
+        background-image: url(https://crushingit.tech/hackathon-assets/product.png);
+    }
+
+    .three {
+        background-image: url(https://crushingit.tech/hackathon-assets/website.png);
+    }
+
+    .four {
+        background-image: url(https://crushingit.tech/hackathon-assets/name-store.png);
+    }
+
+    .five {
+        background-image: url(https://crushingit.tech/hackathon-assets/payment.png);
+    }
+
+    .import {
+        margin: 0vw 0vw 0vw 2.5vw
+    }
+
+
+    /* STEP OPEN START */
+    .show .step-main-body {
+        margin: 1vw 0vw 0vw 0vw;
+    }
+    /* STEP OPEN END */
+}
+
+
+/* NORMAL PC SCREEN VIEW >== 1024 */
+@media only screen and (min-width: 1024px) {
+
+}
