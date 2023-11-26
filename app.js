@@ -1,59 +1,59 @@
 ///DECLARATIONS
-const notificationBtn = document.querySelector('.notification-btn')
+const notificationButton = document.querySelector('.notification-button')
 const notification = document.querySelector('.notification')
-const profileBtn = document.querySelector('.profile-btn')
+const profileButton = document.querySelector('.profile-button')
 const profile = document.querySelector('.profile')
-const logoBtn = document.querySelector('.logo-btn')
-const planBtn  = document.querySelector('.plan-btn')
-const closeBtn = document.querySelector('.close-btn')
+const logoButton = document.querySelector('.logo-button')
+const planButton  = document.querySelector('.plan-button')
+const closeButton = document.querySelector('.close-button')
 const extendDiv = document.querySelector('.extend')
-const setupBtn = document.querySelector('.setup-btn')
+const setupButton = document.querySelector('.setup-button')
 const mainBody = document.querySelector('.main-body')
 const main = document.querySelector('.main')
 const steps = document.querySelectorAll('.step')
-const stepBtn = document.querySelectorAll('.step-btn')
+const stepButton = document.querySelectorAll('.step-button')
 
 
 //HEADER BUTTON FUNCTIONS
-notificationBtn.addEventListener('click', function() {
+notificationButton.addEventListener('click', function() {
     notification.classList.toggle('open')
     profile.classList.remove('open')
 })
 
-profileBtn.addEventListener('click', function() {
+profileButton.addEventListener('click', function() {
     profile.classList.toggle('open')
     notification.classList.remove('open')
 })
 
 
 //REDIRECT BUTTON FUNCTIONS
-logoBtn.addEventListener('click', function() {
+logoButton.addEventListener('click', function() {
     window.location = "https://www.shopify.com"
 })
 
-planBtn.addEventListener('click', function() {
+planButton.addEventListener('click', function() {
     window.location = "https://www.shopify.com/pricing"
 })
 
 
 //CLOSE BUTTON FUNCTION
-closeBtn.addEventListener('click', function() {
+closeButton.addEventListener('click', function() {
     extendDiv.style.display = 'none'
 })
 
 
 //SETUP GUIDE EXPANDER 
-setupBtn.addEventListener('click', function() {
+setupButton.addEventListener('click', function() {
     mainBody.classList.toggle('close')
-    setupBtn.classList.toggle('close')
+    setupButton.classList.toggle('close')
 })
 
 
 //ACCORDION LOGIC
 steps.forEach(function(step) {
-    const btn = step.querySelector('.step-main-btn')
+    const button = step.querySelector('.step-main-button')
 
-    btn.addEventListener('click', function() {
+    button.addEventListener('click', function() {
         steps.forEach(function(item) {
             if (item !== step) {
                 item.classList.remove('show')
@@ -66,7 +66,7 @@ steps.forEach(function(step) {
 
 
 //COMPLETION BUTTON LOGIC AND PROGRESS BAR
-stepBtn.forEach(function(clicked) {
+stepButton.forEach(function(clicked) {
     const number = document.querySelector('.done')
     const bar = document.querySelector('.progress-bar-complete')
 

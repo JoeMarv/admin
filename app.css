@@ -23,6 +23,7 @@
 * {
     -webkit-tap-highlight-color: transparent;
     outline: none;
+    text-decoration: none;
 }
 
 html {
@@ -74,7 +75,7 @@ body {
     justify-content: space-between;
 }
 
-.logo-btn {
+.logo-button {
     margin: 0vw 2vw 0vw 0vw;
     padding: 0vw;
     width: 8vw;
@@ -122,14 +123,14 @@ body {
     border: 2px solid var(--clr-plain-white);
 }
 
-.notification-and-profile-btns {
+.notification-and-profile-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.notification-btn {
+.notification-button {
     background-color: inherit;
     border: none;
     padding: 2vw;
@@ -137,7 +138,7 @@ body {
     margin: 0vw 1vw;
 }
 
-.notification-btn svg {
+.notification-button svg {
     width: 6vw;
     height: 6vw;
 }
@@ -184,7 +185,7 @@ body {
 
 
 /* OPEN NOTIFICATION PANEL START*/
-.open .notification-btn {
+.open .notification-button {
     background-color: var(--clr-nav-grey-200);
 }
 
@@ -194,7 +195,7 @@ body {
 /* OPEN NOTIFICATION PANEL END */
 
 
-.profile-btn {
+.profile-button {
     padding: 0vw;
     border: none;
     font-family: var(--font-family);
@@ -206,7 +207,7 @@ body {
     margin: 0vw 0vw 0vw 1vw;
 }
 
-.profile-btn:focus {
+.profile-button:focus {
     border: 2px solid var(--clr-state-focused);
 }
 
@@ -351,7 +352,7 @@ body {
     width: 100%;
 }
 
-.plan-btn {
+.plan-button {
     margin: 4vw 0vw 0vw 0vw;
     font-weight: 500;
     padding: 2vw 3vw;
@@ -363,7 +364,7 @@ body {
     box-shadow: 0px 1px var(--clr-nav-grey-200);
 }
 
-.close-btn {
+.close-button {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -374,7 +375,7 @@ body {
     color: var(--clr-nav-grey-300);
 }
 
-.close-btn svg {
+.close-button svg {
     height: 6vw;
     width: 6vw;
 }
@@ -393,7 +394,7 @@ body {
     padding: 0vw 2vw
 }
 
-.setup-btn {
+.setup-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -501,7 +502,7 @@ body {
     transition: var(--transition);
 }
 
-.step-btn {
+.step-button {
     display: flex;
     align-items: center;
     height: 7vw;
@@ -514,7 +515,7 @@ body {
     transition: var(--transition);
 }
 
-.step-btn svg {
+.step-button svg {
     width: 7vw;
     height: 7vw;
 }
@@ -572,7 +573,7 @@ body {
 /* STEP BUTTON CLICKED END */
 
 
-.step-main-btn {
+.step-main-button {
     font-weight: 500;
     font-size: 1.085em;
     padding: 1.5vw 0vw;;
@@ -639,7 +640,7 @@ body {
 .step.show {
     background-color: var(--clr-plain-background)
 }
-.show .step-main-btn {
+.show .step-main-button {
     font-weight: 600;
 }
 
@@ -654,11 +655,11 @@ body {
 
 /* SMALL PC SCREEN VIEW >== 768PX */
 @media only screen and (min-width: 768px) {
-    .plan-btn, .step-main-text button {
+    .plan-button, .step-main-text button {
         border: 2px solid transparent;
     }
 
-    .plan-btn:hover, .plan-btn:active {
+    .plan-button:hover, .plan-button:active {
         background-color: var(--clr-plain-white);
         box-shadow: 0.5vw 0.5vw 1vw inset rgba(0,0,0, 0.1);
     }
@@ -668,7 +669,7 @@ body {
         box-shadow: 0px 2px 0px 0px #000000, 0px -1px 0px 1px #666666;
     }
 
-    .plan-btn:focus, .step-main-text button:focus {
+    .plan-button:focus, .step-main-text button:focus {
         border: 2px solid var(--clr-state-focused);
     }
 
@@ -679,7 +680,7 @@ body {
         padding: 1vw 2vw;
     }
 
-    .logo-btn {
+    .logo-button {
         margin: 0vw;
         width: 12vw;
         height: 4vw;
@@ -719,14 +720,14 @@ body {
         border: 2px solid var(--clr-plain-white);
     }
 
-    .notification-and-profile-btns {
+    .notification-and-profile-buttons {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
-    .notification-btn {
+    .notification-button {
         background-color: var(--clr-nav-grey-200);
         border: 2px solid transparent;
         padding: 1vw;
@@ -734,15 +735,15 @@ body {
         margin: 0vw;
     }
 
-    .notification-btn:hover, .notification-btn:active {
+    .notification-button:hover, .notification-button:active {
         background-color: var(--clr-nav-grey-100);
     }
 
-    .notification-btn:focus {
+    .notification-button:focus {
         border: 2px solid var(--clr-state-focused);
     }
 
-    .notification-btn svg {
+    .notification-button svg {
         width: 3vw;
         height: 3vw;
     }
@@ -774,7 +775,7 @@ body {
         padding: 2vw;
     }
 
-    .profile-btn {
+    .profile-button {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -788,11 +789,11 @@ body {
         border: 2px solid transparent;
     }
 
-    .profile-btn:hover, .profile-btn:active {
+    .profile-button:hover, .profile-button:active {
         background-color: var(--clr-nav-grey-100);
     }
 
-    .profile-btn:focus {
+    .profile-button:focus {
         border: 2px solid var(--clr-state-focused);
     }
 
@@ -917,13 +918,13 @@ body {
         align-items: center;
     }
 
-    .plan-btn {
+    .plan-button {
         margin: 0vw;
         padding: 1vw 1.5vw;
         border-radius: 0.75vw;
     }
 
-    .close-btn svg {
+    .close-button svg {
         height: 3vw;
         width: 3vw;
     }
@@ -939,7 +940,7 @@ body {
         padding: 0vw 1vw;
     }
 
-    .setup-btn {
+    .setup-button {
         padding: 0vw 0vw 0.5vw 0vw;
     }
 
@@ -979,19 +980,19 @@ body {
         padding: 1vw;
     }
 
-    .step-btn {
+    .step-button {
         height: 3.5vw;
         width: 3.5vw;
         margin: 0vw 1vw 0vw 0vw;
         border-radius: 1vw;
     }
 
-    .step-btn svg {
+    .step-button svg {
         width: 3.5vw;
         height: 3.5vw;
     }
 
-    .step-main-btn {
+    .step-main-button {
         padding: 0.75vw 0vw;
         width: 66.5vw;
     }
@@ -1059,7 +1060,7 @@ body {
         padding: 1vw 2vw;
     }
 
-    .logo-btn {
+    .logo-button {
         margin: 0vw;
         width: 8vw;
         height: 3vw;
@@ -1084,13 +1085,13 @@ body {
         height: 1.5vw;
     }
 
-    .notification-btn {
+    .notification-button {
         padding: 0.5vw;
         border-radius: 0.75vw;
         margin: 0vw;
     }
 
-    .notification-btn svg {
+    .notification-button svg {
         width: 2vw;
         height: 2vw;
     }
@@ -1120,7 +1121,7 @@ body {
         padding: 1.5vw;
     }
 
-    .profile-btn {
+    .profile-button {
         border-radius: 0.75vw;
         margin: 0vw 0vw 0vw 0.75vw;
     }
@@ -1199,13 +1200,13 @@ body {
         border-radius: 0.75vw;
     }
 
-    .plan-btn {
+    .plan-button {
         margin: 0vw;
         padding: 0.5vw 0.75vw;
         border-radius: 0.5vw;
     }
 
-    .close-btn svg {
+    .close-button svg {
         height: 2.25vw;
         width: 2.25vw;
     }
@@ -1221,7 +1222,7 @@ body {
         padding: 0vw 0.75vw;
     }
 
-    .setup-btn {
+    .setup-button {
         padding: 0vw 0vw 0.375vw 0vw;
     }
 
@@ -1256,19 +1257,19 @@ body {
         padding: 0.75vw;
     }
 
-    .step-btn {
+    .step-button {
         height: 2.7vw;
         width: 2.7vw;
         margin: 0vw 1vw 0vw 0vw;
         border-radius: 1vw;
     }
 
-    .step-btn svg {
+    .step-button svg {
         width: 2.7vw;
         height: 2.7vw;
     }
 
-    .step-main-btn {
+    .step-main-button {
         padding: 0.5vw 0vw;
         width: 54vw;
     }
