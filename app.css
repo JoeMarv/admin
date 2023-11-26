@@ -55,6 +55,12 @@ a:focus-visible {
     border-radius: 0.5rem;
 }
 
+.step-main-text-button:focus-visible {
+    outline: none;
+    border: 2px solid var(--clr-state-focused);
+    border-radius: 0.5rem;
+}
+
 /* MOBILE VIEW */
 body {
     background-color: var(--clr-plain-background);
@@ -207,7 +213,7 @@ body {
     margin: 0vw 0vw 0vw 1vw;
 }
 
-.profile-button:focus {
+.profile-button:focus-visible {
     border: 2px solid var(--clr-state-focused);
 }
 
@@ -610,7 +616,7 @@ body {
     line-height: 1.6;
 }
 
-.step-main-text span span {
+.step-main-text span a {
     color: var(--clr-state-focused);
     font-family: 1.17em;
     font-weight: 600;
@@ -667,10 +673,6 @@ body {
     .step-main-text button:hover, .step-main-text button:active {
         background-color: var(--clr-nav-grey-300);
         box-shadow: 0px 2px 0px 0px #000000, 0px -1px 0px 1px #666666;
-    }
-
-    .plan-button:focus, .step-main-text button:focus {
-        border: 2px solid var(--clr-state-focused);
     }
 
     .header {
@@ -739,10 +741,6 @@ body {
         background-color: var(--clr-nav-grey-100);
     }
 
-    .notification-button:focus {
-        border: 2px solid var(--clr-state-focused);
-    }
-
     .notification-button svg {
         width: 3vw;
         height: 3vw;
@@ -755,6 +753,7 @@ body {
         border-radius: 2vw;
         box-shadow: 0.25vw 0.25vw 0.5vw 0.25vw rgba(0, 0, 0, 0.05);
         display: none;
+        z-index: 100;
     }
 
     .notification-header {
@@ -793,7 +792,7 @@ body {
         background-color: var(--clr-nav-grey-100);
     }
 
-    .profile-button:focus {
+    .profile-button:focus-visible {
         border: 2px solid var(--clr-state-focused);
     }
 
@@ -815,7 +814,8 @@ body {
         margin: 2vw 2vw 0vw 66vw;
         left: 0vw;
         border-radius: 2vw;
-        box-shadow: 0.25vw 0.25vw 0.5vw 0.25vw rgba(0,0,0, 0.05)
+        box-shadow: 0.25vw 0.25vw 0.5vw 0.25vw rgba(0,0,0, 0.05);
+        z-index: 100;
     }
 
     .profile-name {
@@ -1019,6 +1019,10 @@ body {
         margin: 0vw 3vw 0vw 0vw;
         background-repeat: no-repeat;
         background-size: contain;
+        -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 99%),
+                            linear-gradient(to bottom, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 70%),
+                            linear-gradient(to bottom, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 40%),
+                            linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%);
     }
 
     .one {

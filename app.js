@@ -26,6 +26,20 @@ profileButton.addEventListener('click', function() {
 })
 
 
+//TO CLOSE PANELS AFTER CLICKING OUTSIDE
+window.addEventListener('click', function (e) {
+    // To check if the clicked element is inside the profile or notification sections
+    const isProfileClicked = profile.contains(e.target);
+    const isNotificationClicked = notification.contains(e.target);
+
+    // If the click is outside both profile and notification, close them
+    if (!isProfileClicked && !isNotificationClicked) {
+        profile.classList.remove('open');
+        notification.classList.remove('open');
+    }
+})
+
+
 //REDIRECT BUTTON FUNCTIONS
 logoButton.addEventListener('click', function() {
     window.location = "https://www.shopify.com"
